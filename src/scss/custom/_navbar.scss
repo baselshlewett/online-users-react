@@ -1,0 +1,51 @@
+.navbar {
+    // sticky-top navbar-dark bg-primary
+
+    position: sticky;
+    top: 0;
+    background: $primary;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .navbar--container {
+        display: flex;
+        padding: 10px;
+    }
+
+    .navbar--logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+    .navbar__menu--btn {
+        padding: 10px;
+        background-color: transparent;
+        border: 0;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+
+        .item {
+            display: flex;
+            margin-left: 20px;
+
+            .link {
+                text-decoration: none;
+                color: #FFFFFF;
+                transition: 0.15s linear;
+
+                &:hover {
+                    color: red;
+                }
+            }
+        }
+    }
+
+}

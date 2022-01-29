@@ -1,0 +1,60 @@
+.login__form--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%;
+}
+
+.login__form--title {
+    color: $grey-dark;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    border-bottom: 2px solid $red;
+}
+
+.login__form {
+    display: flex;
+    flex-direction: column;
+
+    input {
+        padding: 10px;
+        border: 2px solid $grey-dark;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        transition: 0.25s linear;
+
+        &:hover {
+            border: 2px solid $primary;
+        }
+
+        &:focus-visible {
+            outline: 1px solid $primary;
+        }
+    }
+
+    label {
+        color: $grey-dark;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    button {
+        border: 0;
+        background-color: $grey-dark;
+        color: #FFFFFF;
+        padding: 10px;
+        border-radius: 5px;
+        transition: 0.25s ease-in-out;
+        cursor: pointer;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        font-size: 20px;
+
+        &:hover {
+            background-color: $green;
+        }
+    }
+
+}

@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# online-users-react
+Proof of concept for seeing online users | built with react
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
