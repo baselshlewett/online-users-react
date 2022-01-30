@@ -16,15 +16,20 @@
     .modal__content {
         width: 50%;
         height: 50%;
-        background: white;
+        background: $grey-light;
         padding: 10px;
+        border-radius: 15px;
+
+        @media screen and (max-width: 700px) {
+            width: 90%;
+        }
     }
 
     .modal__header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 1px solid $grey;
+        border-bottom: 1px solid $grey-dark;
         padding-bottom: 10px;
 
         h2 {
@@ -54,7 +59,7 @@
             font-size: 16px;
             padding-bottom: 10px;
             padding-top: 10px;
-            border-bottom: 1px solid $grey-light;
+            border-bottom: 1px solid $grey-dark;
 
             .title {
                 color: $grey-dark;

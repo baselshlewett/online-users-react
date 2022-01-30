@@ -8,20 +8,17 @@ import { logout, selectUser } from './store/user/userSlice';
 import UserPopup from './components/popup/user.popup';
 import { isShownPopup } from './store/popup/UserPopupSlice';
 
-
 const App = () => {
     const user = useSelector(selectUser);
     const shown = useSelector(isShownPopup);
     const dispatch = useDispatch();
 
     useEffect(() => {
-        window.onbeforeunload = (event) => {
-            event.preventDefault();
-            // this is not the most reliabe event to handle user exist, logout/marking user offline should be handled server side
-            dispatch(logout);
-            navigator.sendBeacon(process.env.REACT_APP_BASE_API_URL + '/logout', {email: user.email})
-        }
-    });
+        window.onbeforeunload = function(event) {
+            dispatch(logout());
+            navigator.sendBeacon(process.env.REACT_APP_API_BASE_URL + '/logout', JSON.stringify({ email: 'basel.shlewett@misbar.com' }));
+        };
+    }, []);
 
     return (
         <Layout>

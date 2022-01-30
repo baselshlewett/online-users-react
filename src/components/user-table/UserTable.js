@@ -1,10 +1,5 @@
 import TableRow from './table-row/TableRow';
 
-import { useState, useEffect } from 'react';
-import { getOnlineUsers } from '../../services/User.service';
-import { useSelector } from 'react-redux';
-import { selectUser } from '../../store/user/userSlice';
-
 const OnlineUsersTable = (props) => {
     const user = props.data;
 

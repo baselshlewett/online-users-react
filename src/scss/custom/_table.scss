@@ -32,11 +32,41 @@
     tr:nth-child(even) {
         background-color: $grey-dark;
         color: #FFFFFF;
+
+        .online--users__table--show-user-btn {
+            background-color: transparent;
+            outline: 2px solid #FFFFFF;
+            color: #FFFFFF;
+    
+            &:hover {
+                background-color: #FFFFFF;
+                color: $grey-dark;
+            }
+        }
     }
 
     th {
         padding-top: 12px;
         padding-bottom: 12px;
         text-align: left;
+    }
+
+    .online--users__table--show-user-btn {
+        border: 0;
+        font-family: 'Courier New', Courier, monospace;
+        padding: 5px 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.25s linear;
+        background-color: transparent;
+        outline: 2px solid $grey-dark;
+        color: $grey-dark;
+
+        &:hover {
+            background-color: $grey-dark;
+            color: #FFFFFF;
+        }
     }
 }

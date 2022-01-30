@@ -20,8 +20,8 @@ const TableRow = (props) => {
             </td>
             <td>{data.user_ip}</td>
             <td>
-                <div className="d-flex justify-content-evenly">
-                    <button className="btn btn-danger ml-2" onClick={handleOpen}>Show</button>
+                <div>
+                    <button className="online--users__table--show-user-btn" onClick={handleOpen}>Show</button>
                 </div>
             </td>
         </tr>
