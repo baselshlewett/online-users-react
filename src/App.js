@@ -14,12 +14,10 @@ const App = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        document.addEventListener('visibilitychange', function logData() {
-            if (document.visibilityState === 'hidden') {
-                dispatch(logout());
-                navigator.sendBeacon(process.env.REACT_APP_API_BASE_URL + '/logout', JSON.stringify({ email: user.email }));
-            }
-        });
+        window.onbeforeunload = function(event) {
+            dispatch(logout());
+            navigator.sendBeacon(process.env.REACT_APP_API_BASE_URL + '/logout', JSON.stringify({ email: 'basel.shlewett@misbar.com' }));
+        };
     }, []);
 
     return (
